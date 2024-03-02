@@ -112,7 +112,7 @@ def private_use(func):
 def start_handler(client: Client, message: types.Message):
     payment = Payment()
     from_id = message.from_user.id
-    logging.info("%s welcome to youtube-dl bot!", message.from_user.id)
+    logging.info("%s اهلا بك في بوت التحميل ارسل رابط او كلمة للبحث 🌐!", message.from_user.id)
     client.send_chat_action(from_id, enums.ChatAction.TYPING)
     is_old_user = payment.check_old_user(from_id)
     if is_old_user:
